@@ -6,7 +6,7 @@ function TransactionForm({ onAddTransaction }) {
   const [type, setType] = useState("income");
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent form submission
 
     if (!description || !amount) return;
 

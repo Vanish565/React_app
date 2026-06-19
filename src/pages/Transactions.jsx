@@ -3,7 +3,7 @@ import TransactionForm from "../components/TransactionForm";
 import TransactionList from "../components/TransactionList";
 
 function Transactions() {
-  const [transactions, setTransactions] = useState([]);
+  const [transactions, setTransactions] = useState([]); // states
 
   const addTransaction = (transaction) => {
     setTransactions((prev) => [...prev, transaction]);
