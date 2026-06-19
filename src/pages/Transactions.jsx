@@ -6,7 +6,13 @@ function Transactions() {
   const [transactions, setTransactions] = useState([]); // states
 
   const addTransaction = (transaction) => {
-    setTransactions((prev) => [...prev, transaction]);
+    setTransactions((prev) => [
+      ...prev,
+      {
+        id: crypto.randomUUID(),
+        ...transaction,
+      },
+    ]);
   };
 
   const deleteTransaction = (id) => {

@@ -1,4 +1,4 @@
-function Topbar({ setSidebarOpen, setSidebarCollapsed }) {
+function Topbar({ setSidebarOpen }) {
   return (
     <header className="topbar">
       <button
@@ -6,15 +6,6 @@ function Topbar({ setSidebarOpen, setSidebarCollapsed }) {
         onClick={() => setSidebarOpen(true)}
       >
         ☰
-      </button>
-
-      <button
-        className="collapse-btn"
-        onClick={() =>
-          setSidebarCollapsed((prev) => !prev)
-        }
-      >
-        ⇔
       </button>
 
       <h3>Finance Dashboard</h3>

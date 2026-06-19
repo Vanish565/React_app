@@ -4,7 +4,7 @@ function TransactionList({ transactions, onDeleteTransaction }) {
       {transactions.map((t) => (
         <li key={t.id} style={{ marginBottom: "10px" }}>
           <span>
-            {t.description} | {t.type} | R{t.amount}
+            {t.date} | {t.category} | {t.type} | R{t.amount}
           </span>
 
           <button
