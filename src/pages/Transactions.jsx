@@ -1,5 +1,32 @@
+import { useState } from "react";
+import TransactionForm from "../components/TransactionForm";
+import TransactionList from "../components/TransactionList";
+
 function Transactions() {
-  return <h1>Transactions</h1>;
+  const [transactions, setTransactions] = useState([]);
+
+  const addTransaction = (transaction) => {
+    setTransactions((prev) => [...prev, transaction]);
+  };
+
+  const deleteTransaction = (id) => {
+    setTransactions((prev) =>
+      prev.filter((t) => t.id !== id)
+    );
+  };
+
+  return (
+    <div style={{ padding: "20px" }}>
+      <h1>Transactions</h1>
+
+      <TransactionForm onAddTransaction={addTransaction} />
+
+      <TransactionList
+        transactions={transactions}
+        onDeleteTransaction={deleteTransaction}
+      />
+    </div>
+  );
 }
 
 export default Transactions;
