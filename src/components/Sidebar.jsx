@@ -20,17 +20,19 @@ function Sidebar({ open, setOpen, collapsed, setCollapsed }) {
     >
       {/* Header */}
       <div className="sidebar-header">
-        <h2 className="logo">
-          {collapsed ? "💰" : "Finance"}
-        </h2>
+        <div className="logo-wrapper">
+          <h2 className="logo">
+            {collapsed ? "💰" : "Finance"}
+          </h2>
 
-        {/* Collapse button */}
-        <button
-          className="collapse-btn"
-          onClick={toggleCollapse}
-        >
-          {collapsed ? "→" : "←"}
-        </button>
+          {/* Collapse button */}
+          <button
+            className="collapse-btn"
+            onClick={toggleCollapse}
+          >
+            {collapsed ? "→" : "←"}
+          </button>
+        </div>
       </div>
 
       {/* Links */}
