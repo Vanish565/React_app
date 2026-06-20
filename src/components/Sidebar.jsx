@@ -36,30 +36,32 @@ function Sidebar({ open, setOpen, collapsed, setCollapsed }) {
       </div>
 
       {/* Links */}
-      <NavLink to="/" className={linkClass} onClick={handleLinkClick}>
-        <span>🏠</span>
-        {!collapsed && <span>Dashboard</span>}
-      </NavLink>
+      <nav>
+        <NavLink to="/" className={linkClass} onClick={handleLinkClick}>
+          <span>🏠</span>
+          <span className="sidebar-link-text">Dashboard</span>
+        </NavLink>
 
-      <NavLink to="/transactions" className={linkClass} onClick={handleLinkClick}>
-        <span>💰</span>
-        {!collapsed && <span>Transactions</span>}
-      </NavLink>
+        <NavLink to="/transactions" className={linkClass} onClick={handleLinkClick}>
+          <span>💰</span>
+          <span className="sidebar-link-text">Transactions</span>
+        </NavLink>
 
-      <NavLink to="/budgets" className={linkClass} onClick={handleLinkClick}>
-        <span>📊</span>
-        {!collapsed && <span>Budgets</span>}
-      </NavLink>
+        <NavLink to="/budgets" className={linkClass} onClick={handleLinkClick}>
+          <span>📊</span>
+          <span className="sidebar-link-text">Budgets</span>
+        </NavLink>
 
-      <NavLink to="/reports" className={linkClass} onClick={handleLinkClick}>
-        <span>📈</span>
-        {!collapsed && <span>Reports</span>}
-      </NavLink>
+        <NavLink to="/reports" className={linkClass} onClick={handleLinkClick}>
+          <span>📈</span>
+          <span className="sidebar-link-text">Reports</span>
+        </NavLink>
 
-      <NavLink to="/settings" className={linkClass} onClick={handleLinkClick}>
-        <span>⚙</span>
-        {!collapsed && <span>Settings</span>}
-      </NavLink>
+        <NavLink to="/settings" className={linkClass} onClick={handleLinkClick}>
+          <span>⚙</span>
+          <span className="sidebar-link-text">Settings</span>
+        </NavLink>
+      </nav>
     </div>
   );
 }
